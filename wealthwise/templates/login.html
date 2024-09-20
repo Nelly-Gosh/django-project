@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="icon" href="{% static 'images/main-logo.png'%}">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" />
+  </head>
+  <body>
+    <section>
+      <div class="logo">
+        <img src="{% static 'images/main-logo.png'%}" alt="" />
+      </div>
+  
+      <form action=" " method="post">
+             {% csrf_token %}
+        <h1>Sign-In</h1>
+        <p>Access Your Back! portfolio using your Username and password.</p>
+        <div class="email">
+          <p>Username</p>
+          <input type="text" name="username" placeholder="Enter your Username"required />
+        </div>
+        <div class="password">
+          <div class="item">
+            <p>Password</p>
+            <span><a href="">Forgot Password?</a></span>
+          </div>
+          <input
+            type="password"
+            name="password"
+            id=""
+            placeholder="Enter your password" required
+          />
+          <i class="fa fa-eye icon"></i>
+        </div>
+
+        <button type="submit" value="submit">Sign in</button>
+        <div class="item">
+          <p>New to our platform?</p>
+          <a href="{% url 'signup'%}">Create an account</a>
+        </div>
+      </form>
+    </section>
+    <!-- footer -->
+    <footer>
+      <p>© 2022 Wealthwise.com. All rights reserved</p>
+      <div class="con">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & condition </a>
+      </div>
+    </footer>
+  </body>
+  <script src="{% static 'js/all.js'%}"></script>
+ <!-- <script src="{% static 'js/login.js'%}"></script> -->
+</html>

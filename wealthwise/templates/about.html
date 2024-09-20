@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'css/about.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="nav-bar">
+        <div class="logo"><img src="{% static 'images/main-logo.png'%}" alt="Logo" /></div>
+        <div class="menu-icon">☰</div>
+        <div class="close-icon" style="display: none">✖</div>
+        <ul class="links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="">About</a></li>
+          <li>
+            <a href="{% url 'services' %}"
+              >Services <i class="fa fa-chevron-down"></i
+            ></a>
+          </li>
+          <li><a href="{% url 'investment' %}">Investment Plans</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <!-- end of nav bar -->
+    <main>
+      <!-- first-section -->
+      <section class="first-section">
+        <div class="text">
+          <h1>About</h1>
+          <ul class="link">
+            <li><a href="{% url 'home' %}">Home/</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="first-container">
+          <div class="first-item">
+            <img
+              src="{% static 'images/brooke-cagle-uHVRvDr7pg-unsplash (1).jpg'%}"
+              alt="About Us Image"
+            />
+          </div>
+          <div class="second-item">
+            <span><h3>The Story Behind Our Success</h3></span>
+            <h1>Who Are We</h1>
+            <p>
+              Wealthwise.com is a financial service firm with a focus on digital
+              assets. Wealthwise.com team combines deep technical expertise in
+              the emerging asset class with decades of experience launching
+              investment vehicles for a wide variety of market participants. The
+              firm is led by experienced financial veterans with decades of
+              experience across firms including Mabcredit, Lowry Consulting
+              GMBH, Guggenheim Partners, and Chicago Board of Trade.
+              Wealthwise.com has deep expertise in traditional asset management
+              with extensive background in Fund management, Portfolio
+              management, Investment Banking, and scaling financial products
+              with major financial firms. We aim to be the expert across the
+              universe of investment and digital assets.
+            </p>
+            <p>
+              Wealthwise.com has deep expertise in traditional asset management
+              with extensive background in Fund management, Portfolio
+              management, Investment Banking, and scaling financial products
+              with major financial firms. We aim to be the expert across the
+              universe of investment and digital assets.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- end of first section -->
+      <!-- second section -->
+      <section class="second-section">
+        <div class="second-con">
+          <div class="third-item">
+            <h1 class="h1">Always Ready To Reach Out</h1>
+            <h2>Connected… Committed</h2>
+            <p>
+              What unites a global investment and research company?
+              Communicating with our customers, our culture, each other, and the
+              communities we serve. This unity fosters cooperation and empowers
+              us to pursue a common goal — to bring about better results.
+            </p>
+          </div>
+          <div class="fourth-item">
+            <img
+              src="{% static 'images/Image-AboutUs-OurLeadsership-Getty - Copy.jpg'%}"
+              alt="Leadership"
+            />
+          </div>
+        </div>
+        <!-- third content -->
+        <div class="third-con">
+          <div class="item5">
+            <img
+              src="{% static 'images/Image-OurFirm-CultivatingDiversePerspectives-Collage.jpg'%}"
+              alt="Cultivating Diverse Perspectives"
+            />
+          </div>
+          <div class="item6">
+            <h1 class="h1">A BRIGHTER FUTURE FOR ALL</h1>
+            <h2>Fully Invested in Your Future.</h2>
+            <p>
+              We are committed to helping you achieve the best results … the way
+              you describe them. We get there by empowering different ideas and
+              crossing boundaries. We work together and connect — and we never
+              stop working for you.
+            </p>
+          </div>
+        </div>
+        <div class="fourth-con">
+          <div class="item7">
+            <h1 class="h1">100% SAFETY ON ALL YOUR ASSETS</h1>
+            <h2>Asset Management</h2>
+            <p>
+              We are committed to the search for alpha. A unique combination of
+              expertise across all divisions, consistent revenue, alternatives
+              to multiple assets, and a network of global networks helps us to
+              deliver different information and different solutions to enhance
+              investor success.
+            </p>
+          </div>
+          <div class="item8">
+            <img
+              src="{% static 'images/Image-AboutUs-Tabs-AssetManagement.png'%}"
+              alt="Asset Management"
+            />
+          </div>
+        </div>
+        <!-- general-con -->
+        <div class="general-con">
+          <div class="con1">
+            <div class="item9">
+              <img
+                src="{% static 'images/Image-AboutUs-DifferentiatedInsights-Getty.png'%}"
+                alt="Differentiated Insights"
+                class="img4"
+              />
+            </div>
+            <div class="item10">
+              <h1>Differentiated Insights</h1>
+              <br />
+              <p>
+                Different ideas promote different details, which we translate
+                into a wide range of new solutions across all allocations, fixed
+                income, alternatives, and multiple asset plans.
+              </p>
+            </div>
+          </div>
+          <div class="con2">
+            <div class="item11">
+              <img
+                src="{% static 'images/Image-AboutUs-Reponsibility-Getty (1).png'%}"
+                alt="Responsibility"
+                class="img4"
+              />
+            </div>
+            <div class="item12">
+              <h1>Responsibility</h1>
+              <br />
+              <p>
+                At Wealthwise.com, we make and invest in commitment, striving to
+                create better results for the clients we serve, the communities
+                we serve, and the world in which we live.
+              </p>
+            </div>
+          </div>
+          <div class="con3">
+            <div class="item13">
+              <img
+                src="{% static 'images/Image-AboutUs-DifferentiatedInsights-Getty.png'%}"
+                alt="Uncommonly Collaborative"
+                class="img4"
+              />
+            </div>
+            <div class="item14">
+              <h1>Uncommonly Collaborative</h1>
+              <br />
+              <p>
+                Who we are and what we stand for is the same for all clients,
+                but the way we work with them is by no means the same. Our
+                customers are customers of the whole company. Everyone in our
+                team is involved in organizing our many resources to meet your
+                specific needs.
+              </p>
+            </div>
+          </div>
+          <div class="con4">
+            <div class="item15">
+              <img
+                src="{% static 'images/Image-AboutUs-Community-Getty.jpg'%}"
+                alt="Culture"
+                class="img4"
+              />
+            </div>
+            <div class="item16">
+              <h1>Culture</h1>
+              <br />
+              <p>
+                The tradition is always present in the Wealthwise.com. We work
+                every day to create a diverse, inclusive, and connected culture
+                that empowers everyone to become a better person.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer section -->
+      <footer>
+        <div class="footer-con">
+          <div class="para">
+            <p>
+              Investing involves substantial risk and high volatility, including
+              possible loss of principal. Bonds and bond funds will decrease in
+              value as interest rates rise. An investor should consider the
+              investment objective, risks, charges and expenses of the fund
+              carefully before investing. The prospectus and summary prospectus
+              contain this and other information about the fund. To obtain a
+              prospectus or summary prospectus, contact your investment
+              professional or download and read carefully before investing.
+            </p>
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="fab fa-facebook"
+            ></a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              class="fab fa-twitter"
+            ></a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="fab fa-instagram"
+            ></a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="fab fa-linkedin"
+            ></a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="{% static 'js/script.js'%}"></script>
+    <script src="{% static 'js/all.js'%}"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore environment settings
+.env
+env/
+venv/
+.venv/
+
+# Ignore SQLite database
+*.sqlite3
+
+# Ignore migrations
+*/migrations/
+
+# Ignore media files and staticfiles (if not being tracked)
+/media/
+/staticfiles/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.pid
+*.swp
+*.swo
+
+# Ignore node_modules if you're using any frontend tools
+node_modules/
+
+# Ignore IDE specific files
+.vscode/
+.idea/

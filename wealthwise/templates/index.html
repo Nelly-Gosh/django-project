@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealth wise</title>
+    <link rel="icon" href="{% static 'images/main-logo.png'%}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="nav-bar">
+        <div class="logo"><img src="{% static 'images/main-logo.png'%}" alt="" /></div>
+        <div class="menu-icon">☰</div>
+        <div class="close-icon" style="display: none;">✖</div>
+        <ul class="links">
+          <li><a href="">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li>
+            <a href="{% url 'services' %}"
+              >Services
+              <i class="fa fa-chevron-down"></i>
+            </a>
+          </li>
+          <li><a href="{% url 'investment' %}">Investment Plans</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+      </div>
+    
+    </nav>
+    <!-- end of nav bar -->
+
+    <!-- first section -->
+    <section class="first-section">
+      <div class="gen-div">
+        <div class="first-content">
+          <p>Welcome</p>
+          <br />
+          <br />
+          <h1>
+            Progress Built On <br />
+            <br />
+            Partnerships
+          </h1>
+          <br />
+          <br />
+          <p>
+            We begin with an adoption process that considers your family values,
+            lifestyle and philanthropic goals.
+          </p>
+          <div class="btn1">
+            <button class="learnbtn">
+              <img src="{% static 'images/ion--rocket.svg'%}" alt="" /> Learn More
+            </button>
+            <button class="signbtn" href="{% url 'signup' %}">Sign Up</button>
+          </div>
+        </div>
+        <div class="second-content">
+          <img src="{% static 'images/X-4.png'%}" alt="" />
+        </div>
+      </div>
+
+      <div class="third-content section-content">
+        <img src="{% static 'images/Logo-CarbonMarketInstitute.png' %}" alt="" />
+        <img src="{% static 'images/Logo-InvestorGroupOnClimateChange.png'%}" alt="" />
+        <img src="{% static 'images/Logo-ClimateInitiativeBonds.png'%}" alt="" />
+        <img src="{% static 'images/logo-Climate_Action_100.png'%}" alt="" />
+      </div>
+    </section>
+    <section class="second-section">
+      <h1>Who We Are: The Wealth Workforce</h1>
+      <div class="container section-content">
+        <div class="fircon">
+          <div class="icon">
+            <img src="{% static 'images/fa6-solid--people-carry-box.svg'%}" alt="" />
+          </div>
+          <h2>Wealthwise.com Asset Management</h2>
+          <p>
+            We are a trusted advisor to our clients, assisting them in
+            developing and accessing alternatives to meet their strategic
+            objectives.
+          </p>
+        </div>
+
+        <div class="fircon">
+          <div class="icon">
+            <img src="{% static 'images/mdi--odnoklassniki.svg' %}" alt="" />
+          </div>
+          <h2>Crypto Asset Allocation</h2>
+          <p>Let the experts handle the work of making you rich.</p>
+        </div>
+
+        <div class="fircon">
+          <div class="icon">
+            <img src="{% static 'images/ph--wallet-fill.svg' %}" alt="" />
+          </div>
+          <h2>Wealthwise.com Crypto Wallet</h2>
+          <p>
+            Gain secured exposure to crypto currency space with us at
+            Wealthwise.com.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section class="about-section">
+      <div class="about section-content">
+        <div class="item1">
+          <h2>ABOUT US</h2>
+
+          <h1>We set the pace, others follow</h1>
+
+          <p>
+            As high-conviction investors, we refuse to follow the herd. Instead,
+            we focus on stocks that are out of favour with mainstream investors,
+            as we believe that these offer the greatest potential for long-term
+            gains. Providing investors access to opportunities that will
+            strengthen their portfolios, through Intelligently designed
+            diversified portfolios and ETF solutions. We offervalue added
+            exposure to emerging industries, asset classes and markets as well
+            as differentiated approaches to traditional strategies.
+          </p>
+          <div class="btn1">
+            <button class="learnbtn">
+              <img src="{% static 'images/ion--rocket.svg'%}" alt="" /> Learn More
+            </button>
+          </div>
+        </div>
+        <div class="item2">
+          <img src="{% static 'images/Screenshot-21.png'%}" alt="" />
+        </div>
+      </div>
+      <div class="develop">
+        <div class="text">
+          <h1>
+            Developing Various Talents To Lead Us <br />
+            <br />
+            Ahead
+          </h1>
+          <br /><br />
+          <p>
+            We believe in delivering the best for all our people, so we offer
+            leadership development <br />programs tailored to the needs of each
+            party.
+          </p>
+        </div>
+
+        <div class="container2">
+          <div class="item3">
+            <img
+              src="{% static 'images/brooke-cagle-uHVRvDr7pg-unsplash (1).jpg'%}"
+              alt=""
+            />
+          </div>
+          <div class="item4">
+            <h2>Workforce diversity</h2>
+            <br />
+            <p>
+              We focus on attracting diverse talented people by maintaining a
+              strong employer brand and expanding where and how we meet
+              potential prospective employees. We employ disadvantaged
+              communities, including women, people of color, people with
+              disabilities and people with a military background, among others.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about section -->
+    <!-- third-section -->
+    <section class="third-section">
+      <div class="inclusive">
+        <h1>Inclusive workplace</h1>
+        <br />
+        <br />
+        <p>
+          Our business is designed to help people manage their financial future,
+          and the same applies to our people. We invest in our employees and
+          their future by building a culture of support, teamwork, flexibility
+          and balance.
+        </p>
+      </div>
+      <div class="inclusive-img">
+        <img
+          src="{% static 'images/arlington-research-kN_kViDchA0-unsplash (1).jpg'%}"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- fourth section -->
+    <section class="fourth-section">
+      <div class="general">
+        <div class="item5">
+          <img
+            src="{% static 'images/jason-goodman-Oalh2MojUuk-unsplash (1).jpg'%}"
+            alt=""
+          />
+        </div>
+        <div class="item6">
+          <h1>Connected… Committed</h1>
+          <br />
+          <br />
+          <p>
+            What unites a global investment and research company? Communicating
+            with our customers, our culture, each other and the communities we
+            serve. This unity fosters cooperation and empowers us to pursue a
+            common goal — to bring about better results
+          </p>
+        </div>
+      </div>
+      <div class="items section-content">
+        <div class="item7">
+          <h3>Wealthwise.com Trading</h3>
+          <br />
+          <p>
+            Ensuring positive results for our customers is central to all the
+            decisions we make.
+          </p>
+        </div>
+        <div class="item8">
+          <h3>Algorithmic Trading Solutions</h3>
+          <p>
+            Our comprehensive list of advanced in-house algorithms and layout
+            solutions can be customized to meet individual needs.
+          </p>
+        </div>
+        <div class="item9">
+          <h3>High-Touch Trading</h3>
+          <p>
+            The Wealthwise high quality sales team uses our global network of
+            institutional customers to earn natural money. A loyal partner to
+            our customers, orders are treated with the same care and diligence
+            as a side buyer who manages his orders.
+          </p>
+        </div>
+        <div class="item10">
+          <h3>Portfolio Trading</h3>
+          <p>
+            Our knowledgeable international portfolio trading team assists with
+            the planning and implementation of cash flows, estimates and
+            transitions. Our global trading platform helps to balance
+            globalization.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- fourth section ends -->
+    <!-- fifth section begins -->
+    <section class="fifth-section">
+      <h1 class="get">Getting started</h1>
+      <div class="gen section-content">
+        <div class="sign-gen">
+          <div class="text1">
+            <h2>Sign Up</h2>
+            <br />
+            <p>
+              We help people achieve their goals by providing the right funding,
+              wealth management and insurance advice.
+            </p>
+          </div>
+          <div class="text2">
+            <h1>Start Investing</h1>
+          </div>
+          <div class="text3">
+            <h2>Watch your wealth grow</h2>
+            <br />
+            <p>
+              When it comes to investing, most people have a long-term goal –
+              we’re here to guarantee it.
+            </p>
+          </div>
+        </div>
+        <div class="icon-gen">
+          <div class="circle">
+            <img
+              src="{% static 'images/openmoji--overlapping-white-squares.svg'%}"
+              alt=""
+            />
+          </div>
+          <div class="line"></div>
+          <div class="circle">
+            <img src="{% static 'images/ic--baseline-wifi.svg'%}" alt="" />
+          </div>
+          <div class="line"></div>
+          <div class="circle">
+            <img src="{% static 'images/ic--baseline-shopping-basket.svg'%}" alt="" />
+          </div>
+          <div class="line"></div>
+        </div>
+        <div class="reg-gen">
+          <h1>Registration</h1>
+          <div>
+            <h2>Pick your investment</h2>
+            <br />
+            <p>
+              Speak to any of our staffs and agents to get a tailored investment
+              plan to suit your needs.
+            </p>
+          </div>
+
+          <h1>Start Earning</h1>
+        </div>
+      </div>
+      <div class="general2">
+        <div class="container3">
+          <img
+            src="{% static 'images/jeremy-bezanger-glY0yf3lxA4-unsplash-scaled.jpg'%}"
+            alt=""
+          />
+        </div>
+        <div class="container4">
+          <h1>Time tested investment methods</h1>
+          <br /><br />
+          <p>
+            Our team of independent financial advisers will work with you to
+            build financial plans that enable you to achieve your short, medium
+            and long term financial goals.
+          </p>
+
+          <div class="gen-low">
+            <div class="holder">
+              <div class="circle1">
+                <img src="{% static 'images/fe--users.svg'%}" alt="" />
+              </div>
+              <h1>Low Service Charges</h1>
+            </div>
+            <div class="holder">
+              <div class="circle2">
+                <img src="{% static 'images/heroicons--home-20-solid.svg'%}" alt="" />
+              </div>
+              <h1>Quick and Safe Transactions</h1>
+            </div>
+            <div class="holder">
+              <div class="circle3">
+                <img src="{% static 'images/clarity--wallet-solid.svg'%}" alt="" />
+              </div>
+              <h1>An Award Winning Company</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- table section -->
+      <div class="table-section">
+        <h1>Deposit and withdrawals history</h1>
+        <div class="table-con">
+          <div class="first-table">
+            <h3>Last deposit</h3>
+            <br />
+            <table>
+              <tr>
+                <thead>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Currency</th>
+                </thead>
+              </tr>
+              <tr>
+                <td>China</td>
+                <td>2024-02-24</td>
+                <td>$500</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>Ranafrog57</td>
+                <td>024-02-22</td>
+                <td>$65,000</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>China5</td>
+                <td>2024-02-18</td>
+                <td>$50,000</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>Ranafrog56</td>
+                <td>2024-02-09</td>
+                <td>$700</td>
+                <td>bitcoin</td>
+              </tr>
+            </table>
+          </div>
+          <div class="second-table">
+            <h3>Last withdrawals</h3>
+            <br />
+            <table>
+              <tr>
+                <thead>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Currency</th>
+                </thead>
+              </tr>
+              <tr>
+                <td>China</td>
+                <td>2024-02-24</td>
+                <td>$500</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>Ranafrog57</td>
+                <td>024-02-22</td>
+                <td>$65,000</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>China5</td>
+                <td>2024-02-18</td>
+                <td>$50,000</td>
+                <td>bitcoin</td>
+              </tr>
+              <tr>
+                <td>Ranafrog56</td>
+                <td>2024-02-09</td>
+                <td>$700</td>
+                <td>bitcoin</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer-con">
+        <div class="para">
+          <p>
+            Investing involves substantial risk and high volatility, including
+            possible loss of principal. Bonds and bond funds will decrease in
+            value as interest rates rise. An investor should consider the
+            investment objective, risks, charges and expenses of the Fund
+            carefully before investing.
+          </p>
+        </div>
+        <div class="fin">
+          <h2>Financial News</h2>
+          <br />
+          <p><a href="">Financial times</a></p>
+          <br />
+          <p><a href="">The Wall Street Journal</a></p>
+          <br />
+          <p><a href=""></a>Bloombreg</p>
+          <br />
+          <p><a href="">Zero Hedge</a></p>
+        </div>
+        <div class="leg">
+          <h2>Legal</h2>
+          <br />
+          <p><a href="./images/certificate.pdf">View Certificate</a></p>
+          <br />
+          <p><a href="./images/whitepaper.pdf">View Whitepapers</a></p>
+          <br />
+          <p><a href="./images/annual.pdf">View Annual Report</a></p>
+        </div>
+        <div class="in">
+          <h2>Get InTouch With Us</h2>
+          <br />
+          <p>
+            <a href="">4 Tyne View, Newcastle Upon Tyne, England, NE15 8DE</a>
+          </p>
+          <br />
+          <p><a href="">T : +447458945486</a></p>
+          <br />
+          <p><a href="">E : Wealthwise049@gmail.com</a></p>
+          <br />
+          <p><a href="">E : Wealthwise049@gmail.com</a></p>
+        </div>
+      </div>
+      <br />
+      <div class="linef"></div>
+      <p class="copy">Copyright © Wealthwise.com 2022 All Rights Reserved</p>
+      <a href="{% url 'Dashboard' %}">Go to Dashboard</a>
+    </footer>
+  </body>
+  <script src="{% static 'js/all.js'%}"></script>
+  <script src="{% static 'js/script.js'%}"></script>
+</html>

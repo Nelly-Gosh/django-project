@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar sidebar-hidden">
+            <img src="./images/logo.png" alt="Logo" class="logo" />
+            <ul>
+                <li><a href="#" data-section="dash">Dashboard <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#" data-section="pricing">Pricing <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#" data-section="deposit">Deposit <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#" data-section="withdrawals">Withdrawal <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#" data-section="Transactions">Transactions <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#" data-section="profile">Profile <i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <section id="dash">
+                <!-- Dashboard content -->
+                ...
+            </section>
+            <section id="pricing" class="hidden">
+                <!-- Pricing content -->
+                ...
+            </section>
+            <section id="deposit" class="hidden">
+                <!-- Deposit content -->
+                ...
+            </section>
+            <section id="withdrawals" class="hidden">
+                <!-- Withdrawals content -->
+                ...
+            </section>
+            <section id="Transactions" class="hidden">
+                <!-- Transactions content -->
+                ...
+            </section>
+            <section id="profile" class="hidden">
+                <!-- Profile content -->
+                ...
+            </section>
+        </div>
+    </div>
+
+    <script src="./js/all.js"></script>
+    <script src="./js/dash.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebarToggle = document.getElementById("bars-icon");
+            const sidebar = document.querySelector(".sidebar");
+            const links = sidebar.querySelectorAll("a");
+            const sections = document.querySelectorAll("section");
+
+            // Toggle sidebar visibility
+            sidebarToggle.addEventListener("click", function() {
+                sidebar.classList.toggle("sidebar-visible");
+                sidebar.classList.toggle("sidebar-hidden");
+            });
+
+            // Switch sections
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const target = e.currentTarget.getAttribute("data-section");
+
+                    sections.forEach(section => {
+                        if (section.id === target) {
+                            section.classList.remove("hidden");
+                        } else {
+                            section.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealthwise Investment Plan</title>
+    <link rel="icon" href="{% static 'images/main-logo.png'%}" />
+    <link rel="stylesheet" href="{% static 'css/invest.css'%}" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="nav-bar">
+        <div class="logo"><img src="{% static 'images/main-logo.png'%}" alt="Logo" /></div>
+        <div class="menu-icon">☰</div>
+        <div class="close-icon" style="display: none">✖</div>
+
+        <ul class="links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li>
+            <a href="{% url 'services' %}"
+              >Services <i class="fa fa-chevron-down"></i
+            ></a>
+          </li>
+          <li><a href="#">Investment Plans</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <!-- end of nav bar -->
+    <!-- main -->
+    <!-- first section  -->
+    <section class="first-section">
+      <div class="text">
+        <h1 class="h1">Investment Plans</h1>
+        <ul class="link">
+          <li><a href="{% url 'home' %}">Home/</a></li>
+          <li><a href="#">Investment plans</a></li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <div class="container">
+          <h1>BRONZE PLAN</h1>
+          <h2><sup>$</sup>100</h2>
+          <p>-$999</p>
+          <p><i class="fa fa-check"></i> 5% Daily</p>
+          <hr />
+          <p><i class="fa fa-check"></i> For 2 Days</p>
+          <hr />
+          <p><i class="fa fa-check"></i>24/7 Support</p>
+
+          <button href="{% url 'signup' %}" class="btn">Invest Now</button>
+        </div>
+        <!-- second item -->
+        <div class="container">
+          <h1>PREMIUM PLAN</h1>
+          <h2><sup>$</sup>1000</h2>
+          <p>-$4999</p>
+          <p><i class="fa fa-check"></i> 7% Daily</p>
+          <hr />
+          <p><i class="fa fa-check"></i> For 3 Days</p>
+          <hr />
+          <p><i class="fa fa-check"></i>24/7 Support</p>
+
+          <button class="btn">Invest Now</button>
+        </div>
+        <!-- third item -->
+        <div class="container">
+          <h1>PLATINUM PLAN</h1>
+          <h2><sup>$</sup>5000</h2>
+          <p>-$9999</p>
+          <p><i class="fa fa-check"></i> 10% Daily</p>
+          <hr />
+          <p><i class="fa fa-check"></i> For 4 Days</p>
+          <hr />
+          <p><i class="fa fa-check"></i>24/7 Support</p>
+
+          <button class="btn">Invest Now</button>
+        </div>
+        <!-- fourth item -->
+        <div class="container">
+          <h1>DIAMOND PLAN</h1>
+          <h2><sup>$</sup>10000</h2>
+          <p>-$24999</p>
+          <p><i class="fa fa-check"></i> 12% Daily</p>
+          <hr />
+          <p><i class="fa fa-check"></i> For 5 Days</p>
+          <hr />
+          <p><i class="fa fa-check"></i>24/7 Support</p>
+
+          <button class="btn" >Invest Now</button>
+        </div>
+        <!-- fifth item -->
+        <div class="container">
+          <h1>VIP PLAN</h1>
+          <h2><sup>$</sup>25000</h2>
+          <p>-UNLIMITED</p>
+          <p>-$999</p>
+          <p><i class="fa fa-check"></i> 15% Daily</p>
+          <hr />
+          <p><i class="fa fa-check"></i> For 7 Days</p>
+          <hr />
+          <p><i class="fa fa-check"></i>24/7 Support</p>
+
+          <button class="btn">Invest Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer>
+      <div class="footer-con">
+        <div class="para">
+          <p>
+            Investing involves substantial risk and high volatility, including
+            possible loss of principal. Bonds and bond funds will decrease in
+            value as interest rates rise. An investor should consider the
+            investment objective, risks, charges and expenses of the Fund
+            carefully before investing.
+          </p>
+        </div>
+        <div class="fin">
+          <h2>Financial News</h2>
+          <br />
+          <p><a href="#">Financial times</a></p>
+          <br />
+          <p><a href="#">The Wall Street Journal</a></p>
+          <br />
+          <p><a href="#">Bloomberg</a></p>
+          <br />
+          <p><a href="#">Zero Hedge</a></p>
+        </div>
+        <div class="leg">
+          <h2>Legal</h2>
+          <br />
+          <p><a href="./images/certificate.pdf">View Certificate</a></p>
+          <br />
+          <p><a href="./images/whitepaper.pdf">View Whitepapers</a></p>
+          <br />
+          <p><a href="./images/annual.pdf">View Annual Report</a></p>
+        </div>
+        <div class="in">
+          <h2>Get InTouch With Us</h2>
+          <br />
+          <p>
+            <a href="#">4 Tyne View, Newcastle Upon Tyne, England, NE15 8DE</a>
+          </p>
+          <br />
+          <p><a href="#">T : +447458945486</a></p>
+          <br />
+          <p><a href="#">E : Wealthwise049@gmail.com</a></p>
+          <br />
+          <p><a href="#">E : Wealthwise049@gmail.com</a></p>
+        </div>
+      </div>
+      <br />
+      <div class="linef"></div>
+      <p class="copy">Copyright © Wealthwise.com 2022 All Rights Reserved</p>
+    </footer>
+    <script src="{% static 'js/script.js'%}"></script>
+    <script src="{% static 'js/invest.js'%}"></script>
+    <script src="{% static 'js/all.js'%}"></script>
+  </body>
+</html>

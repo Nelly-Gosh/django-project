@@ -1,0 +1,92 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="item bars-icon"><i class="fa fa-bars icon"></i></div>
+    <div class="con2">
+        <div class="item"><i class="fa fa-user icon"></i></div>
+        <div class="item"><i class="fa fa-cog icon"></i></div>
+    </div>
+</div>
+
+<div class="fourth-container">
+    <div class="third-wrapper">
+        <!-- Wallet Balance -->
+        <div class="small-items">
+            <div>
+                <h1>Wallet</h1>
+                <p>Balance</p>
+            </div>
+            <span>${{ wallet.balance }}</span>
+        </div>
+
+        <!-- Approved Deposits -->
+        <div class="small-items">
+            <div>
+                <h1>Deposit</h1>
+                <p>Approved deposits</p>
+            </div>
+            <span>${{ total_deposits }}</span> 
+        </div>
+
+        <div class="small-items">
+            <div>
+                <h1>Withdrawal</h1>
+                <p>Approved withdrawals</p>
+            </div>
+            <span>${{ total_withdrawals }}</span> 
+        </div>
+    </div>
+
+    <!-- Deposit Form -->
+    <form class="first-form" method="post">
+        {% csrf_token %}
+
+        <div class="fourth-wrapper">
+            <h3>Deposit</h3>
+            <p>
+                Payment Instructions: Kindly type in the amount you wish to
+                invest and click on INVEST to Proceed. Amount must be in plain
+                figures and default currency is USD($). Example: Simply type in 1000 if you wish to invest $1,000.
+            </p>
+            <i class="fa fa-times"></i> <!-- Consider adding functionality to this button -->
+        </div>
+
+        <hr />
+
+        <!-- Plan Selection -->
+        <p>Select Plan</p>
+        <select name="plan" id="plan">
+            <option value="bronze">Bronze</option>
+            <option value="premium">Premium</option>
+            <option value="platinum">Platinum</option>
+            <option value="diamond">Diamond</option>
+            <option value="vip">Vip</option>
+        </select>
+
+        <!-- Method Selection -->
+        <p>Select Method</p>
+        <select name="method" id="method">
+            <option value="bitcoin">Bitcoin</option>
+            <option value="ethereum">Ethereum</option>
+            <option value="usdt">Usdt (trc20)</option>
+        </select>
+
+        <!-- Amount Input -->
+        <p>Amount($)</p>
+        <input type="number" name="amount" placeholder="Amount" step="0.01" required />
+
+        <hr />
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn2" name="deposit" value="submit">
+            Submit <i class="fa fa-arrow-right"></i>
+        </button>
+    </form>
+
+    <!-- Additional Image -->
+    <img src="{% static 'images/download (5).png'%}" alt="" class="img2" />
+</div>
+
+{% endblock %}

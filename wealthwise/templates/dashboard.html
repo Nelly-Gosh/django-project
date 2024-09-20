@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Wealthwise-Dashboard</title>
+    <link rel="icon" href="{% static 'images/main-logo.png'%}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="sidebar">
+        <img src="{% static 'images/main-logo.png'%}" alt="" class="logo" />
+        <ul>
+          <li>
+            <a href="#" data-section="dash"
+              >Dashboard <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-section="pricing"
+              >Pricing <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-section="deposit"
+              >Deposit <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+        
+             <li>
+            <a href="#" data-section="re-invest"
+              >Re-invest <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+            <li>
+            <a href="#" data-section="withdrawals"
+              >Withdrawal <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-section="Transactions"
+              >Transactions <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-section="profile"
+              >profile <i class="fa fa-chevron-right"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <section id="dash">
+          <div class="container">
+      
+            <div class="item bars-icon"><i class="fa fa-bars icon"></i></div>
+            <div class="con2">
+              <div class="item"><i class="fa fa-user icon"></i></div>
+              <div class="item"><i class="fa fa-cog icon"></i></div>
+            </div>
+          </div>
+          <div class="sec-container">
+            <div class="deposit">
+              <div>
+                <h1>Wallet</h1>
+                <p>Balance</p>
+              </div>
+              <span>${{ wallet.balance }}</span>
+            </div>
+            <div class="deposit">
+              <div>
+                <h1>Deposit</h1>
+                <p>Active deposits</p>
+              </div>
+              <span>$0.00</span>
+            </div>
+            <div class="deposit">
+              <div>
+                <h1>Withdrawal</h1>
+                <p>Approved</p>
+                <p>withdrawals</p>
+              </div>
+              <span>$0.00</span>
+            </div>
+            <div class="deposit">
+              <div>
+                <h1>Profits</h1>
+                <p>Profits Earned</p>
+              </div>
+              <span>$0.00</span>
+            </div>
+            <div class="deposit">
+              <div>
+                <p>Bitcoin</p>
+                <p>Ethereum</p>
+                <p>Usdt</p>
+              </div>
+              <div>
+                <span>$0.00</span> <br />
+                <span>$0.00</span> <br />
+                <span>$0.00</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="pricing" class="hidden">
+          <div class="container">
+            <div class="item bars-icon" ><i class="fa fa-bars icon"></i></div>
+            <div class="con2">
+              <div class="item bars-icon"><i class="fa fa-user icon"></i></div>
+              <div class="item"><i class="fa fa-cog icon"></i></div>
+            </div>
+          </div>
+          <div class="third-container">
+            <div class="second-wrapper">
+              <div class="small-items">
+                <div>
+                  <h1>Wallet</h1>
+                  <p>Balance</p>
+                </div>
+                <span>${{ wallet.balance }}</span>
+              </div>
+
+              <div class="small-items">
+                <div>
+                  <h1>Deposit</h1>
+                  <p>Approved deposits</p>
+                </div>
+                <span>$0.00</span>
+              </div>
+              <div class="small-items">
+                <div>
+                  <h1>Withdrawal</h1>
+                  <p>Approved withdrawals</p>
+                </div>
+                <span>$0.00</span>
+              </div>
+              <div class="large-item">
+                <h1>/BRONZE PLAN</h1>
+                <hr />
+                <h3>$100 - $999</h3>
+                <hr />
+                <p>2 Days</p>
+                <button>Return On Investment</button>
+                <p>5% daily profit</p>
+                <button>Principle</button>
+                <p>Capital back in 2 days</p>
+                <img src="{% static 'images/download (1).png'%}" alt="" class="imgs" />
+              </div>
+
+              <div class="large-item">
+                <h1>/Premium Plan</h1>
+                <hr />
+                <h3>$1000 - $4,999</h3>
+                <hr />
+                <p>3 Days</p>
+                <button>Return On Investment</button>
+                <p>7% daily profit</p>
+                <button>Principle</button>
+                <p>Capital back in 3 days</p>
+                <img src="{% static 'images/download (1).png'%}" alt="" class="imgs" />
+              </div>
+              <div class="large-item">
+                <h1>/Platinum Plan</h1>
+                <hr />
+                <h3>$5000 - $9,999</h3>
+                <hr />
+                <p>4 Days</p>
+                <button>Return On Investment</button>
+                <p>10% daily profit</p>
+                <button>Principle</button>
+                <p>Capital back in 4 days</p>
+                <img src="{% static 'images/download (2).png'%}" alt="" class="imgs" />
+              </div>
+              <div class="large-item">
+                <h1>/Diamond Plan</h1>
+                <hr />
+                <h3>$10000 - $24999</h3>
+                <hr />
+                <p>5 Days</p>
+                <button>Return On Investment</button>
+                <p>12% daily profit</p>
+                <button>Principle</button>
+                <p>Capital back in 5 days</p>
+                <img src="{% static 'images/download (3).png'%}" alt="" class="imgs" />
+              </div>
+              <div class="large-item">
+                <h1>/Vip Plan</h1>
+                <hr />
+                <h3>$25000- Unlimited</h3>
+                <hr />
+                <p>7 Days</p>
+                <button>Return On Investment</button>
+                <p>15% daily profit</p>
+                <button>Principle</button>
+                <p>Capital back in 7 days</p>
+                <img src="{% static 'images/download (4).png'%}" alt="" class="imgs" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="deposit" class="hidden">
+            {% include 'deposit.html' %}
+        </section>
+        <section id="withdrawals" class="hidden">
+           {% include 'withdraw.html' %}
+        </section>
+        <section id="Transactions" class="hidden">
+           {% include 'transactions.html' %} 
+        </section>
+        <section id="profile" class="hidden">
+           <div class="container">
+            <div class="item bars-icon"><i class="fa fa-bars icon"></i></div>
+            <div class="con2">
+              <div class="item"><i class="fa fa-user icon"></i></div>
+              <div class="item"><i class="fa fa-cog icon"></i></div>
+            </div>
+          </div>
+          <div class="third-container">
+            <div class="second-wrapper">
+              <div class="small-items">
+                <div>
+                  <h1>Wallet</h1>
+                  <p>Balance</p>
+                </div>
+                <span>${{ wallet.balance }}</span>
+              </div>
+
+              <div class="small-items">
+                <div>
+                  <h1>Deposit</h1>
+                  <p>Approved deposits</p>
+                </div>
+                <span>$0.00</span>
+              </div>
+              <div class="small-items">
+                <div>
+                  <h1>Withdrawal</h1>
+                  <p>Approved withdrawals</p>
+                </div>
+                <span>$0.00</span>
+          </div>
+            </div>
+<div class="verify">
+  <h3>Verification Status: not Verified</h3>
+</div>
+<div class="fifth-container">
+  <div class="one-item">
+    <p>First Name:</p>
+    <div class="line">{{ profile.first_name }}</div>
+  </div>
+  <div class="one-item">
+    <p>Last Name:</p>
+    <div class="line">{{ profile.last_name }}</div>
+  </div>
+   <div class="one-item">
+    <p>Email:</p>
+    <div class="line">{{user.email}}</div>
+  </div>
+   <div class="one-item">
+    <p>Country:</p>
+    <div class="line">{{profile.country}}</div>
+  </div>
+   <div class="one-item">
+    <p>Phone Number:</p>
+    <div class="line">{{profile.phone_number}}</div>
+
+  </div>
+  <hr>
+  <button type="submit" class="btn3">Update Details</button>
+</div>
+        </section>
+
+  <section id="re-invest" class="hidden">
+    {% include 're-invest.html' %}
+  </section>
+    </div>
+
+    <script src="{% static 'js/all.js'%}"></script>
+    <script src="{% static 'js/dash.js'%}"></script>
+  </body>
+  {% endblock %}
+</html>

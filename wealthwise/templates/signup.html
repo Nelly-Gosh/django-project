@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="icon" href="{% static 'images/main-logo.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+    <section>
+      <div class="logo">
+        <img src="{% static 'images/main-logo.png' %}" alt="WealthWise Logo" />
+      </div>
+
+      <form method="post">
+        {% csrf_token %}
+        <h1>Sign-Up</h1>
+        <small>Create an account to gain access to the panel.</small>
+
+        <div class="first">
+          {{ form.first_name.label_tag }}
+          {{ form.first_name }}
+        </div>
+        <div class="last">
+          {{ form.last_name.label_tag }}
+          {{ form.last_name }}
+        </div>
+        <div class="country">
+          {{ form.country.label_tag }}
+          {{ form.country }}
+        </div>
+        <div class="phone">
+          {{ form.phone_number.label_tag }}
+          {{ form.phone_number }}
+        </div>
+        <div class="email">
+          {{ form.email.label_tag }}
+          {{ form.email }}
+        </div>
+        <div class="user">
+          {{ form.username.label_tag }}
+          {{ form.username }}
+        </div>
+        <div class="password">
+          {{ form.password1.label_tag }}
+          <small class="small">Password must contain at least eight characters**</small>
+          {{ form.password1 }}
+        </div>
+        <div class="confirm">
+          {{ form.password2.label_tag }}
+          {{ form.password2 }}
+        </div>
+        <div class="check">
+          <input type="checkbox" name="terms" id="terms" class="box" required />
+          <small>
+            <p>I agree with <span>Privacy & Policy, Terms & Conditions</span></p>
+          </small>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="already">
+          <small>
+            <p>
+              Already have an account?
+              <a href="{% url 'login' %}">Sign in</a>
+            </p>
+          </small>
+        </div>
+      </form>
+    </section>
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+      <p>© {{ now|date:"Y" }} Wealthwise.com. All rights reserved.</p>
+      <div class="con">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & condition</a>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/all.js' %}"></script>
+  </body>
+</html>

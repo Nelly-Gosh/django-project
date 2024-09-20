@@ -1,0 +1,75 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="item bars-icon"><i class="fa fa-bars icon"></i></div>
+  <div class="con2">
+    <div class="item"><i class="fa fa-user icon"></i></div>
+    <div class="item"><i class="fa fa-cog icon"></i></div>
+  </div>
+</div>
+<!-- sixth-section -->
+<div class="sixth-section">
+  <div class="third-wrapper">
+    <div class="small-items">
+      <div>
+        <h1>Wallet</h1>
+        <p>Balance</p>
+      </div>
+      <span>${{ wallet.balance }}</span>
+    </div>
+
+    <div class="small-items">
+      <div>
+        <h1>Deposit</h1>
+        <p>Approved deposits</p>
+      </div>
+      <span>$0.00</span>
+    </div>
+    <div class="small-items">
+      <div>
+        <h1>Withdrawal</h1>
+        <p>Approved withdrawals</p>
+      </div>
+      <span>$0.00</span>
+    </div>
+  </div>
+  <div class="table1">
+    <i class="fa fa-chevron-circle-down right"></i>
+    <h1>Deposit Transactions</h1>
+    <hr />
+    <div class="text2">
+      <small>You have no Deposit History</small>
+      <table>
+        <tr>
+          <td>#ID</td>
+          <td>Date</td>
+          <td>Amount</td>
+          <td>Type</td>
+          <td>Plan</td>
+          <td>Status</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="table1">
+    <i class="fa fa-chevron-circle-down right"></i>
+    <h1>Withdrawal Transactions</h1>
+    <hr />
+    <div class="text2">
+      <small>You have no withdrawals History</small>
+      <table>
+        <tr>
+          <td>#ID</td>
+          <td>Date</td>
+          <td>Amount</td>
+          <td>Type</td>
+          <td>Plan</td>
+          <td>Status</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
